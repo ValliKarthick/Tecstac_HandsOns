@@ -1,0 +1,34 @@
+﻿@model Tecstac_HandsOns.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewDetails</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>StudentName</td>
+            <td>@Html.DisplayFor(model => model.StudentName)</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>@Html.DisplayFor(model => model.Department)</td>
+        </tr>
+        <tr>
+            <td>PhoneNumber</td>
+            <td>@Html.DisplayFor(model => model.PhoneNumber)</td>
+        </tr>
+        <tr>
+            <td>EnrolledDate</td>
+            <td>@Html.DisplayFor(model => model.EnrolledDate)</td>
+        </tr>
+    </table>
+
+</body>
+</html>

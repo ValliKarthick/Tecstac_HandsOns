@@ -1,0 +1,27 @@
+﻿@model Tecstac_HandsOns.Models.Project
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddProjectDetails</title>
+</head>
+<body>
+    @using (Html.BeginForm("ProjectDetail"))
+    {
+        @Html.LabelFor(x => x.ProjectName)
+        @Html.TextBoxFor(x => x.ProjectName)
+        @Html.LabelFor(x => x.Platform)
+        @Html.TextBoxFor(x => x.Platform)
+        @Html.LabelFor(x => x.Client)
+        @Html.TextBoxFor(x => x.Client)
+        @Html.LabelFor(x => x.Duration)
+        @Html.TextBoxFor(x => x.Duration)
+        <button type="submit" id="submit">Submit</button>
+    }
+</body>
+</html>

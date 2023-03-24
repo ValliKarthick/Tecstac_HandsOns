@@ -1,0 +1,99 @@
+﻿
+@model Tecstac_HandsOns.Models.Course
+@{
+    Layout = null;
+    bool Display;
+    if (Model == null)
+    { Display = false; }
+    else
+    {
+        Display = true;
+    }
+}
+<h2>Enter New Course Details</h2>
+
+@using (Html.BeginForm("Course", "Course"))
+{
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.CourseName, "Course Name")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.CourseName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.CourseId, "Course Id")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.CourseId)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Duration, "Course Duration")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Duration)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Level, "Course Level")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Level)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+            </td>
+        </tr>
+    </table>
+
+    if (Display)
+    {
+        <h2>Details of the New Course</h2>
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.CourseName, "Course Name")
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.CourseName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.CourseId, "Course Id")
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.CourseId)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Duration, "Course Duration")
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.Duration)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Level, "Course Level")
+                </td>
+                <td>
+                    @Html.TextBoxFor(model => model.Level)
+                </td>
+            </tr>
+        </table>
+    }
+}
+

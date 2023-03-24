@@ -1,0 +1,26 @@
+﻿@model Tecstac_HandsOns.Models.ShoppingCart
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+</head>
+<body>
+    <div>
+        <h2>Shopping Cart Details</h2>
+        <p> @Html.DisplayFor(model => model.CartId)</p>
+        <p> @Html.DisplayFor(model => model.ItemName)</p>
+        <p> @Html.DisplayFor(model => model.ItemType)</p>
+        <p> @Html.DisplayFor(model => model.Price)</p>
+    </div>
+</body>
+</html>
+
+
+

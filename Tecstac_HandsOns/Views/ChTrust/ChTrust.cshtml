@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChTrust</title>
+    <style>
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table align="center">
+            <tr>
+                <td colspan="2">@Html.Partial("_HeaderNavBar")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Name")</td>
+                <td>@Html.TextBox("txName")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Phone Number")</td>
+                <td>@Html.TextBox("txPhoneNumber")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Donation For")</td>
+                <td>
+                    @Html.DropDownList("ddlDonation", new List<SelectListItem>()
+           { new SelectListItem() {Text="Education",Value="Education" },
+           new SelectListItem() {Text="Hospital",Value="Hospital" },
+           new SelectListItem() {Text="Old People Caring Home",Value="Old People Caring Home" }
+           },
+           new { style = "width: 140px" }
+           )
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Amount")</td>
+                <td>@Html.TextBox("txAmount")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Donation Type")</td>
+                <td>
+                    @Html.RadioButton("rbDonationType", "One Time Donation", isChecked: true)One Time Donation
+                    @Html.RadioButton("rbDonationType", "Recurring Donation")@Html.Label("Recurring Donation")
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" id="submit">PROCEED</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">@Html.Partial("_FooterNavBar")</td>
+            </tr>
+        </table>
+    }
+</body>
+</html>

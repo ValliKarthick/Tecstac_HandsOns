@@ -1,0 +1,71 @@
+﻿@model Tecstac_HandsOns.Models.Registration
+
+@{
+    Layout = null;
+}
+
+<h1 style="text-align:center;"><b><u>One Stop service</u></b></h1>
+@using (Html.BeginForm("Registration", "Vehicle"))
+{
+    <table align="center">
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.CustomerName, "Customer Name:")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.CustomerName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.PhoneNumber, "Phone Number")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.PhoneNumber)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.VehicleNo, "Vehicle Number")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.VehicleNo)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.VehicleModel, "Vehicle Model")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.VehicleModel)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.City, "City")
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.City)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.ServiceType, "Service Type")
+            </td>
+            <td>
+                @Html.RadioButtonFor(m => m.ServiceType, "Regular")<label>Regular</label>
+                @Html.RadioButtonFor(m => m.ServiceType, "Others")<label>Others</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                <button type="submit" value="Confirm" class="btn btn-primary">Confirm</button>
+                <button type="reset" value="Reset" class="btn btn-primary">Reset</button>
+            </td>
+        </tr>
+    </table>
+}
+

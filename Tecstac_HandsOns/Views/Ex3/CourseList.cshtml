@@ -1,0 +1,26 @@
+﻿@*@model IEnumerable<Tecstac_HandsOns.Models.Course>*@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CourseList</title>
+</head>
+<body>
+    <div>
+        <p>
+            <h2>Available Courses</h2>
+            @foreach (string coursename in @Model.CourseList)
+            {
+                @coursename
+                <br />
+            }
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model Tecstac_HandsOns.Models.Course
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CourseDescription</title>
+</head>
+<body>
+    <div>
+        <h1>Course Details</h1>
+        <table>
+            <tr>
+                <td>Course ID:</td>
+                <td>@Html.TextBoxFor(model => model.CourseId)</td>
+            </tr>
+            <tr>
+                <td>Course Name:</td>
+                <td>@Html.TextBoxFor(model => model.CourseName)</td>
+            </tr>
+            <tr>
+                <td>Course Duration:</td>
+                <td>@Html.TextBoxFor(model => model.Duration)</td>
+            </tr>
+            <tr>
+                <td>Course Level:</td>
+                <td>@Html.TextBoxFor(model => model.Level)</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
